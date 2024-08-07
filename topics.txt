@@ -1,0 +1,36 @@
+types:
+-- char
+-- signed int
+-- unsigned int
+-- float/double/long double
+-- bool
+-- size_t, ptrdiff_t
+-- 
+-- 
+
+Print:
+-- Printf 
+-- scanf
+
+Data Types:
+-- Struct
+-- Array
+-- Union
+
+Pointers:
+-- Basics
+-- Function Points int - (*my_int_f)(int) = &abs;
+-- Void / Null
+
+Control Flow:
+-- If Else
+-- For / While / Break / Switch
+
+-- basic function - int mult (int x, int y)
+  printf( "Please input two numbers to be multiplied: " );
+  scanf( "%d", &x );
+  scanf( "%d", &y );
+  printf( "The product of your two numbers is %d\n", mult( x, y ) );
+  getchar(); 
+
+-- remember its: int *x, *y, *z NOT int* x, y, z (in later only x is a pointer..,)
