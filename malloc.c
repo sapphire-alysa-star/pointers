@@ -4,6 +4,9 @@
 // If the sum of your stack variables (including low-level overhead such as return addresses, stack-based arguments, return value placeholders and alignment bytes) 
 // in the entire call stack exceeds that limit, you get a stack overflow, which typically takes down your program without any chance at recovery.
 
+// If I run ulimit -a and check stack size I get:
+// stack size (kbytes, -s) 8192
+
 
 int main() {
 
