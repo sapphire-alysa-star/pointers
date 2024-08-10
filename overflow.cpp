@@ -1,27 +1,18 @@
-// How to get my kilobyte limit
+// How to get my stack size limit in kilobytes
 // ulimit -s
 // 8192
+
+// Most machines have 1K to 8K kb of stack memory. Thats 250K to 2million 32-bit integers.
 
 #include <iostream>
 #include <stack>
 
 int main() {
-    std::stack<int> myStack;
+    const int num_bytes = 8100*1024; 
+    // const int num_bytes = 8192*1024; // This version Always triggers a seg fault memory error.
 
-    // kilobyte is 1024 bytes
-    char x1[4000*1024];
-    std::fill(x1, x1+1000, '0');
-
-    std::cout << "1 bytes per char. 4000 kilobytes\n";
-
-    char x2[4000*1024];
-    std::fill(x2, x2+1000, '0');
-
-    std::cout << "8000 kb of char stored\n";
-
-    // If we do this again I get a segfault on my machine. 8000kb is near da limit.
-    // int x3[200*1000];
-    // std::fill(x3, x3+1000, 0);
+    char chars[num_bytes]; // The max num_bytes I can use is not consistent on my machine. 
+    std::fill(chars, chars + num_bytes, '0'); // You dont actually need this line. But wanted to show they are filled.
 
     return 0;
 }
