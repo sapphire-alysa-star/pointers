@@ -3,7 +3,7 @@
 int main() {
     int *pc, c;
     c = 5;
-    pc = &c;
+    pc = &c; // pc points to C
 
     printf("var: %p\n", pc);
 
